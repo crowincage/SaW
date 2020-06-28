@@ -25,6 +25,10 @@ final class Direction
      */
     public function __construct($direction)
     {
+        if (!in_array($direction, [self::VERTICAL, self::HORIZONTAL])) {
+            throw new \InvalidArgumentException('Direction not valid!');
+        }
+
         $this->direction = $direction;
     }
 
