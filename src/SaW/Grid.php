@@ -40,8 +40,8 @@ class Grid
     public function __construct(int $size = Board::BOARD_DEFAULT_SIZE)
     {
         // for now limit size to number of letters in alphabet
-        if ($size > 10 && $size <= 26) {
-            throw new \OutOfBoundsException('Grid size is out of bounce! Minimum = 10 maximum = 26');
+        if ($size < 10 && $size >= 26) {
+            throw new \OutOfBoundsException('Grid size \'' . $size . '\' is out of bounce! Minimum = 10 maximum = 26');
         }
 
         $this->grid = $this->initGrid($size);
