@@ -1,0 +1,1777 @@
+{
+	"info": {
+		"_postman_id": "273f62c3-27be-4c42-b7c3-21f550d7160e",
+		"name": "SaW",
+		"description": "SaW (Ships at War) - battleship API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "games",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Retrieves a Game resource.",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/games/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"games",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Resource not found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/games/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"games",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Game resource response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/games/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"games",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/ld+json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"@context\": \"aliquip amet sed\",\n \"@id\": \"ex dolore\",\n \"@type\": \"Duis reprehenderit\",\n \"boards\": [\n  {\n   \"@context\": \"consequat ex fugiat\",\n   \"@id\": \"in\",\n   \"@type\": \"ex pariatur\",\n   \"boardSize\": -14321808,\n   \"boardType\": \"exercitation eu\",\n   \"layout\": \"nisi anim\",\n   \"id\": 63783123\n  },\n  {\n   \"@context\": \"aute\",\n   \"@id\": \"eiusmod in magna nulla ad\",\n   \"@type\": \"ipsum in\",\n   \"boardSize\": -40444302,\n   \"boardType\": \"reprehenderit consectetur velit\",\n   \"layout\": \"eiusmod ullam\",\n   \"id\": -40162941\n  }\n ],\n \"player\": {\n  \"name\": \"minim sit veniam in\",\n  \"@context\": \"pariatur velit\",\n  \"@id\": \"dolor nulla\",\n  \"@type\": \"enim occaecat c\",\n  \"id\": 37503371,\n  \"createdAt\": \"Ut\"\n },\n \"roundCount\": -2728882,\n \"id\": 66650464,\n \"createdAt\": \"proident ea nostrud\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Removes the Game resource.",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/games/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"games",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Resource not found",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/games/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"games",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Game resource deleted",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/games/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"games",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Retrieves the collection of Board resources.",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/games/:id/boards?page=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"games",
+												":id",
+												"boards"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1",
+													"description": "The collection page number"
+												}
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Resource not found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/games/:id/boards?page=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"games",
+														":id",
+														"boards"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Board collection response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/games/:id/boards?page=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"games",
+														":id",
+														"boards"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/ld+json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"hydra:member\": [\n  {\n   \"game\": \"Excepteur sit do tempor\",\n   \"boardSize\": 57111176,\n   \"boardType\": \"et fugiat\",\n   \"boardUser\": \"do ut non\",\n   \"layout\": \"magna cupidatat minim\",\n   \"id\": 30628232\n  },\n  {\n   \"game\": \"ut sint\",\n   \"boardSize\": -4403960,\n   \"boardType\": \"tempor in adipisicing\",\n   \"boardUser\": \"est irure\",\n   \"layout\": \"ipsum tempor\",\n   \"id\": 86043332\n  }\n ],\n \"hydra:totalItems\": 74347883,\n \"hydra:view\": {\n  \"@id\": \"dolor\",\n  \"@type\": \"irure ea\",\n  \"hydra:first\": \"elit\",\n  \"hydra:last\": \"ex nisi\",\n  \"hydra:next\": \"exercitation est\"\n },\n \"hydra:search\": {\n  \"@type\": \"ullamco qui enim sit esse\",\n  \"hydra:template\": \"do esse\",\n  \"hydra:variableRepresentation\": \"ullamco commodo voluptate\",\n  \"hydra:mapping\": [\n   {\n    \"@type\": \"est ali\",\n    \"variable\": \"sint minim laboris ut ad\",\n    \"property\": \"quis aute commodo fugiat\",\n    \"required\": true\n   },\n   {\n    \"@type\": \"id\",\n    \"variable\": \"culpa cillum\",\n    \"property\": \"sit proident\",\n    \"required\": false\n   }\n  ]\n }\n}"
+										}
+									]
+								},
+								{
+									"name": "Retrieves a Player resource.",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/games/:id/player",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"games",
+												":id",
+												"player"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Player resource response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/games/:id/player",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"games",
+														":id",
+														"player"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/ld+json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"name\": \"cupidatat proident laborum veniam\",\n \"@context\": \"exercitation\",\n \"@id\": \"dolore\",\n \"@type\": \"in cupidatat\",\n \"game\": \"incididunt nostrud vo\",\n \"id\": 13472084,\n \"createdAt\": \"eu deserunt\"\n}"
+										},
+										{
+											"name": "Resource not found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/games/:id/player",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"games",
+														":id",
+														"player"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Retrieves the collection of Game resources.",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/games?page=1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"games"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"description": "The collection page number"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Game collection response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/games?page=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"games"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/ld+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"hydra:member\": [\n  {\n   \"boards\": [\n    {\n     \"@context\": \"Ut qui voluptate ea\",\n     \"@id\": \"culpa cillum eiusmod\",\n     \"@type\": \"nulla culp\",\n     \"id\": 9705868\n    },\n    {\n     \"@context\": \"pariatur minim\",\n     \"@id\": \"non proident enim\",\n     \"@type\": \"consequat\",\n     \"id\": 96962073\n    }\n   ],\n   \"player\": {\n    \"name\": \"i\",\n    \"@context\": \"tempor cillum\",\n    \"@id\": \"aute\",\n    \"@type\": \"dolor ex\",\n    \"id\": 62850506,\n    \"createdAt\": \"commodo adipisicing et al\"\n   },\n   \"roundCount\": 58824350,\n   \"id\": 65471966,\n   \"createdAt\": \"laboris consequat ipsum do cupidatat\"\n  },\n  {\n   \"boards\": [\n    {\n     \"@context\": \"minim cupidatat dolor\",\n     \"@id\": \"mollit amet\",\n     \"@type\": \"dolore\",\n     \"id\": -56750640\n    },\n    {\n     \"@context\": \"nulla qui\",\n     \"@id\": \"in cillum nostrud enim labore\",\n     \"@type\": \"e\",\n     \"id\": -1183418\n    }\n   ],\n   \"player\": {\n    \"name\": \"consequat eiusmod magna ea\",\n    \"@context\": \"enim\",\n    \"@id\": \"ut Ut nulla sit\",\n    \"@type\": \"sed\",\n    \"id\": 3639830,\n    \"createdAt\": \"enim aliqua tempor commodo\"\n   },\n   \"roundCount\": 472644,\n   \"id\": 86532304,\n   \"createdAt\": \"in anim velit ut\"\n  }\n ],\n \"hydra:totalItems\": 29558082,\n \"hydra:view\": {\n  \"@id\": \"id\",\n  \"@type\": \"eiusmod U\",\n  \"hydra:first\": \"cupidatat incididunt exercitation\",\n  \"hydra:last\": \"esse est do quis\",\n  \"hydra:next\": \"officia eu in et\"\n },\n \"hydra:search\": {\n  \"@type\": \"veniam dolor Excepteur ut\",\n  \"hydra:template\": \"elit proident dolore dolore in\",\n  \"hydra:variableRepresentation\": \"minim\",\n  \"hydra:mapping\": [\n   {\n    \"@type\": \"et elit do \",\n    \"variable\": \"non\",\n    \"property\": \"in\",\n    \"required\": true\n   },\n   {\n    \"@type\": \"nulla\",\n    \"variable\": \"nostrud fugiat voluptate\",\n    \"property\": \"nisi id\",\n    \"required\": true\n   }\n  ]\n }\n}"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "ships",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Retrieves a Ship resource.",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/ships/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"ships",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Ship resource response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/ships/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"ships",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/ld+json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"title\": \"dolore nostrud\",\n \"@context\": \"et dolor mollit\",\n \"@id\": \"l\",\n \"@type\": \"l\",\n \"size\": -67285639,\n \"id\": 6338711\n}"
+										},
+										{
+											"name": "Resource not found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/ships/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"ships",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Removes the Ship resource.",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/ships/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"ships",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Resource not found",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/ships/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"ships",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Ship resource deleted",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/ships/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"ships",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Replaces the Ship resource.",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"<string>\",\n    \"size\": \"<integer>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/ships/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"ships",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Resource not found",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"title\": \"<string>\",\n    \"size\": \"<integer>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/ships/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"ships",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Ship resource updated",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"title\": \"<string>\",\n    \"size\": \"<integer>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/ships/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"ships",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/ld+json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"title\": \"dolore nostrud\",\n \"@context\": \"et dolor mollit\",\n \"@id\": \"l\",\n \"@type\": \"l\",\n \"size\": -67285639,\n \"id\": 6338711\n}"
+										},
+										{
+											"name": "Invalid input",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"title\": \"<string>\",\n    \"size\": \"<integer>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/ships/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"ships",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Updates the Ship resource.",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/merge-patch+json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"<string>\",\n    \"size\": \"<integer>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/ships/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"ships",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Invalid input",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"title\": \"<string>\",\n    \"size\": \"<integer>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/ships/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"ships",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Ship resource updated",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"title\": \"<string>\",\n    \"size\": \"<integer>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/ships/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"ships",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/ld+json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"title\": \"dolore nostrud\",\n \"@context\": \"et dolor mollit\",\n \"@id\": \"l\",\n \"@type\": \"l\",\n \"size\": -67285639,\n \"id\": 6338711\n}"
+										},
+										{
+											"name": "Resource not found",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"title\": \"<string>\",\n    \"size\": \"<integer>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/ships/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"ships",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Retrieves the collection of Ship resources.",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/ships?page=1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"ships"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"description": "The collection page number"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Ship collection response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/ships?page=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"ships"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/ld+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"hydra:member\": [\n  {\n   \"title\": \"nisi occaecat laboris enim\",\n   \"@context\": \"laborum ut eiusmod\",\n   \"@id\": \"aliquip\",\n   \"@type\": \"culpa ullamco\",\n   \"size\": -29822225,\n   \"id\": 57627081\n  },\n  {\n   \"title\": \"enim amet officia velit ullamco\",\n   \"@context\": \"ullamco irure mollit consectetur\",\n   \"@id\": \"veniam Lorem tempor\",\n   \"@type\": \"occaecat officia qui\",\n   \"size\": 84667343,\n   \"id\": -55079690\n  }\n ],\n \"hydra:totalItems\": 8882075,\n \"hydra:view\": {\n  \"@id\": \"eu non dolore\",\n  \"@type\": \"cupidatat magna laboris dolore\",\n  \"hydra:first\": \"ut lab\",\n  \"hydra:last\": \"Ut laborum\",\n  \"hydra:next\": \"in adipisicing sunt ut\"\n },\n \"hydra:search\": {\n  \"@type\": \"ullamco tempor sunt\",\n  \"hydra:template\": \"amet esse\",\n  \"hydra:variableRepresentation\": \"Duis mollit cupidatat\",\n  \"hydra:mapping\": [\n   {\n    \"@type\": \"sit do est\",\n    \"variable\": \"Duis dolor\",\n    \"property\": \"nisi aute in\",\n    \"required\": true\n   },\n   {\n    \"@type\": \"pariatur deserunt amet \",\n    \"variable\": \"deserunt\",\n    \"property\": \"proident minim laboris cillum\",\n    \"required\": true\n   }\n  ]\n }\n}"
+								}
+							]
+						},
+						{
+							"name": "Creates a Ship resource.",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"<string>\",\n    \"size\": \"<integer>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/ships",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"ships"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Invalid input",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"<string>\",\n    \"size\": \"<integer>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/ships",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"ships"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Ship resource created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"<string>\",\n    \"size\": \"<integer>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/ships",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"ships"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/ld+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"title\": \"dolore nostrud\",\n \"@context\": \"et dolor mollit\",\n \"@id\": \"l\",\n \"@type\": \"l\",\n \"size\": -67285639,\n \"id\": 6338711\n}"
+								},
+								{
+									"name": "Resource not found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"<string>\",\n    \"size\": \"<integer>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/ships",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"ships"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "saw",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Get a SaW game",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/saw/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"saw",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Failed request params validation",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/saw/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"saw",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "\"\""
+										},
+										{
+											"name": "The Game entity",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/saw/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"saw",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"boards\": [\n  {\n   \"boardSize\": -17284950,\n   \"boardType\": \"enim aliqua in\",\n   \"layout\": \"in Ut ut officia\",\n   \"id\": 32824961\n  },\n  {\n   \"boardSize\": -38983494,\n   \"boardType\": \"sint ad ut occaecat\",\n   \"layout\": \"culpa Excepteur nisi fugiat non\",\n   \"id\": -33974589\n  }\n ],\n \"player\": {\n  \"name\": \"laborum\",\n  \"id\": 44177668,\n  \"createdAt\": \"incididunt labore sint cupidatat\"\n },\n \"roundCount\": -68264876,\n \"id\": 18752907,\n \"createdAt\": \"ex sed\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Place a ship",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"coordinate\": \"<string>\",\n    \"shipId\": \"<integer>\",\n    \"direction\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/saw/:id/place_ship",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"saw",
+												":id",
+												"place_ship"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Failed request params validation",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"coordinate\": \"<string>\",\n    \"shipId\": \"<integer>\",\n    \"direction\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/saw/:id/place_ship",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"saw",
+														":id",
+														"place_ship"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "\"\""
+										},
+										{
+											"name": "Untitled Response",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"coordinate\": \"<string>\",\n    \"shipId\": \"<integer>\",\n    \"direction\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/saw/:id/place_ship",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"saw",
+														":id",
+														"place_ship"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"game\": {\n  \"player\": {\n   \"id\": -25195959,\n   \"createdAt\": \"Lorem nostrud anim\"\n  },\n  \"roundCount\": -32485272,\n  \"id\": -7441806,\n  \"createdAt\": \"veniam est velit\"\n },\n \"boardSize\": -47926222,\n \"boardType\": \"eu adipisicing non fugiat\",\n \"boardUser\": \"ea est eu\",\n \"layout\": \"velit\",\n \"id\": -15779056\n}"
+										}
+									]
+								},
+								{
+									"name": "Make a shot",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"coordinate\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/saw/:id/shot",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"saw",
+												":id",
+												"shot"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "The created Game entity",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"coordinate\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/saw/:id/shot",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"saw",
+														":id",
+														"shot"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"COORDINATE\": true\n}"
+										}
+									]
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Start a new SaW game",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"playerName\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/saw/start",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"saw",
+										"start"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Failed request params validation",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"playerName\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/saw/start",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"saw",
+												"start"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"\""
+								},
+								{
+									"name": "The created Game entity",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"playerName\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/saw/start",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"saw",
+												"start"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"boards\": [\n  {\n   \"boardSize\": 37780961,\n   \"boardType\": \"cupidatat aliqua\",\n   \"layout\": \"in amet et\",\n   \"id\": -89291941\n  },\n  {\n   \"boardSize\": -36882153,\n   \"boardType\": \"id nisi officia sit dolore\",\n   \"layout\": \"qui ullamco\",\n   \"id\": 82372633\n  }\n ],\n \"player\": {\n  \"name\": \"nisi voluptate\",\n  \"id\": 39235684,\n  \"createdAt\": \"sit aute culpa ex consectetur\"\n },\n \"roundCount\": -11040462,\n \"id\": 58964502,\n \"createdAt\": \"in commodo\"\n}"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Retrieves a Board resource.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/boards/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"boards",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Resource not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/boards/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"boards",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Board resource response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/boards/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"boards",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/ld+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"@context\": \"eu laborum fugiat sed\",\n \"@id\": \"sit\",\n \"@type\": \"consectetur elit amet\",\n \"game\": {\n  \"@context\": \"labore dolore Duis\",\n  \"@id\": \"incididunt id pariatur culpa\",\n  \"@type\": \"et cupidatat dolore\",\n  \"player\": {\n   \"@context\": \"nulla consectetur Duis anim\",\n   \"@id\": \"anim cupidatat laboris\",\n   \"@type\": \"sit\",\n   \"id\": 14285966,\n   \"createdAt\": \"id ut\"\n  },\n  \"roundCount\": 42361663,\n  \"id\": -56949304,\n  \"createdAt\": \"ad\"\n },\n \"boardSize\": -7906381,\n \"boardType\": \"proident enim exercitation dolor aute\",\n \"boardUser\": \"irure qui mollit\",\n \"layout\": \"velit et enim aliquip\",\n \"id\": 27098788\n}"
+						}
+					]
+				},
+				{
+					"name": "Retrieves a Player resource.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/players/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"players",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Player resource response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/players/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"players",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/ld+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"name\": \"ullamco\",\n \"@context\": \"ex anim voluptate exercitation in\",\n \"@id\": \"laboris non\",\n \"@type\": \"proident magna\",\n \"game\": {\n  \"@context\": \"ea in\",\n  \"@id\": \"fugiat\",\n  \"@type\": \"Lorem deserunt\",\n  \"id\": 51269420,\n  \"createdAt\": \"in voluptate\"\n },\n \"id\": -45465335,\n \"createdAt\": \"dolor Lorem voluptate\"\n}"
+						},
+						{
+							"name": "Resource not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/players/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"players",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"variable": [
+		{
+			"id": "baseUrl",
+			"key": "baseUrl",
+			"value": "http://localhost:8000",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
